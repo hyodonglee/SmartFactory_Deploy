@@ -1,2 +1,1 @@
-# SmartFactory_Deploy
-Deployment module of SmartFactory
+# termproject.sample

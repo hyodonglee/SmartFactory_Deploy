@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  loginserver:
+    build: ./loginServer
+    image: loginserver
+    container_name: loginserver
+    hostname: loginserver
+    stdin_open: true
+    tty: true
+    ports:
+      - "5000:5000"
+
+  gqlserver:
+    build: ./gqlServer
+    image: gqlserver
+    container_name: gqlserver
+    hostname: gqlserver
+    stdin_open: true
+    tty: true
+    ports:
+      - "4000:4000"
+    # depends_on:
+    #   - sim
+
+  client:
+    build: ./client
+    image: client
+    container_name: client
+    hostname: client
+    stdin_open: true
+    tty: true
+    ports:
+      - "3000:3000"
+    # depends_on:
+    #   - sim
+
